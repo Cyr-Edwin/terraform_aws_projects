@@ -25,8 +25,6 @@ resource "aws_s3_bucket" "bucket" {
 }
 
 # create an SNS Topic
-############ Creating an SNS Topic ############
- 
 resource "aws_sns_topic" "topic" {
   name = "s3-event"
   policy = <<POLICY
