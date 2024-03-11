@@ -96,7 +96,8 @@ resource "aws_s3_bucket" "mybucket" {
 terraform apply -auto-approve
 ```
 ### IX- Debugging
-we have to delete all the file(.terraform , terrafor.tfstate , etc ....) and add **"/*"** at the end of **${aws_s3_bucket.mybucket.arn}**  and rewrite the policy to solve the errors below:
+we have to delete all the file(.terraform , terrafor.tfstate , etc ....) and add **"/*"** at the end of **${aws_s3_bucket.mybucket.arn}** and rewrite the policy to solve the errors below:
+
 ![alt text](image-1.png)
 ![alt text](image-2.png)
 
