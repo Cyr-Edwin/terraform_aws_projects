@@ -97,8 +97,8 @@ terraform apply -auto-approve
 
 ## VII- Create a output file
 We use website_endpoint attribute, which is **Deprecated**. So change the output attribute according to your need
-![alt-text][/home/edmundo/terraform_aws/web_hosting/assets/deprecated_attribute.png]
 
+![alt text](image.png)
      
 
 
