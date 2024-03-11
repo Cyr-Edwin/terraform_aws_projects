@@ -4,6 +4,7 @@
 In this work, I designed an infrastructure for hosting a static website. This static website is hosting in AWS, specifically in S3. And I use Terraform to build it. The main objective is to enlight the automated provisioning and deployment of a Static Website.
 
 ## Architecture Diagram
+![alt text](image-5.png)
 
 ## Implimentation
 
@@ -41,20 +42,20 @@ Default region name:
 Default output format
 ```
 
-## III- Prepare your website Content
+### III- Prepare your website Content
 
  Create a folder HTML with 2 files: index.html and error.html. Make sure that Terraform can access that folder.
 
- ## IV- File Syntax
+ ### IV- File Syntax
 
   Terraform configuration files ends with the extension **".tf"**
   (Example: variables.tf)
 
-## V- Write your configuration files in your prefer IDE
+### V- Write your configuration files in your prefer IDE
 
 * Visual Studio
 
-## VI- Define a Provider
+### VI- Define a Provider
 
  Create a file called **profile.tf** where we defined the provider we intended to use (AWS). Syntax is shown below:
 ```
@@ -62,13 +63,13 @@ provider "aws" {
     region= "us-east-1"
 }
 ```
-## VII- Initialization of  Terraform
+### VII- Initialization of  Terraform
 
 we run the command below and make sure that we are in the directory where we defined our configuration files. That command install the neccessary plugins and modules required to connect to our Provider (AWS).
 ```
 terraform init
 ```
-## VII- Create a Resource file 
+### VIII- Create a Resource file 
 
 * Called the resource file : **resource.tf**
 
@@ -94,12 +95,25 @@ resource "aws_s3_bucket" "mybucket" {
 ```
 terraform apply -auto-approve
 ```
+### IX- Debugging
+we have to delete all the file(.terraform , terrafor.tfstate , etc ....) and add **"/*"** at the end of **${aws_s3_bucket.mybucket.arn}**  and rewrite the policy to solve the errors below:
+![alt text](image-1.png)
+![alt text](image-2.png)
 
-## VII- Create a output file
+### X- Create a output file
 We use website_endpoint attribute, which is **Deprecated**. So change the output attribute according to your need
 
 ![alt text](image.png)
      
+### XI- Outcomes
+![alt text](image-3.png)
+![alt text](image-4.png)
+
+### XII- Tear down the Infrastructure
+use the command below to destroy the infrastructure
+```
+terraform destroy -auuto-approve
+```
 
 
 
