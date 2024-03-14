@@ -23,4 +23,5 @@ This project deploys a Two-Tier architecture in AWS and uses Terraform in a modu
 * Use those keys to create your **profile** in your Command Line Interface (CLI) (https://spacelift.io/blog/terraform-aws-provider)
 
 #### Step 2: Create Modules
- 1 - Security Group module
+ 1 - VPC module
+ 2 - Security Group module

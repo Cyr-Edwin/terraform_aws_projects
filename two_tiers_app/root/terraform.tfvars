@@ -1,0 +1,11 @@
+# VPC
+my-vpc-name = "my-vpc"
+my-alb-sg-name= "my-alb-sg-name"
+my-ec2-web-sg-name="my-ec2-web-sg-name"
+my-rds-sg-name="my-rds-sg-name"
+my-cidr-block = "10.0.0.0/16"
+my-igw-name = "two-tier-igw"
+my-public-cidr-block1="10.0.1.0/24"
+my-web-public-subnet1="web-public-subnet-1"
+my-public-cidr-block2="10.0.2.0/24"
+my-web-public-subnet2="web-public-subnet-2"
