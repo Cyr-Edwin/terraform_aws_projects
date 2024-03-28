@@ -31,17 +31,17 @@ Ecs cluster is a set of resources that containers will run on. Those resources a
 
     - ECS Task Definition:   template that describes how container(s) are supposed to be launched
 
-    ![alt text](image-2.png)
+![alt text](image-2.png)
 
     - ECS Task :  running containers with instruction defined in the Task Definition
 
-    ![alt text](image-3.png)
+![alt text](image-3.png)
 
      - ECS Services : ensures that a certain number of Tasks are running at all the times
 
-     ![alt text](image-4.png)
+![alt text](image-4.png)
 
      - ECS and Load Balancer: LB can be assigned to route external traffic to your Service
 
-     ![alt text](image-5.png)
+![alt text](image-5.png)
 
